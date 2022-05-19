@@ -18,10 +18,11 @@ The three previous steps are incorporated in the preprocessing notebook: _prepro
 The output of the phonetizer consists of two files: pronunciation dictionary _dict_ and pronunciation of each utterance _utterance_pronunciation_. We will need dict for as input for the aligner.
 
 5- Perform alignment  
-You will need to install HTK aligner on a linux machine. [Steps to install HTK on Ubuntu](https://gist.github.com/laic/39b8b2e156c39c778888aa825aee9877).  
-After successful installation, you will need to create a folder for your data which will contain the lab and wav files (each lab file contains transcript of one audio). You will also need the dictionary as output by the aligner. The next step is to run the following command:  
+You will need to install HTK on a linux machine. [Steps to install HTK on Ubuntu](https://gist.github.com/laic/39b8b2e156c39c778888aa825aee9877).  
+After successful installation of HTK, you will need to install prosodylab aligner to use HTK from this [github repo](https://github.com/nawarhalabi/Prosodylab-Aligner). you will need to create a folder for your data which will contain the lab and wav files (each lab file contains transcript of one audio).  
+Now, you will also need the dictionary as output by the aligner. The next step is to run the following command:  
 `python3 -m aligner -r lang-mod.zip -a data/ -d lang.dict` where:  
-_lang-mod.zip_ is the HMM language model (in our case we used a model built for arabic). Arabic language model can be found [here](https://github.com/nawarhalabi/Prosodylab-Aligner). It is named _bootstrap.zip_.
+_lang-mod.zip_ is the HMM language model (in our case we used a model built for arabic). It is available in the prosodylab aligner github repo and is named _bootstrap.zip_.  
 _data_ a folder containing lab and wav files  
 _lang.dict_ the dictionary  
 The aligner mah flag any formatting errors in the dictionary. These must be corrected manually. Once no more errors are available, on the next run, the aligner will return a list of words out of dictionary (OOV). This list must be fed to the phonetizer and run the before last cell in the notebook _phonetizer.ipynb_. Append the output _phonetizedOOV.txt_ to the corrected dictionary and run the last cell of the phonetizer notebook. The ouput will given as input to the aligner (you will probably need to perform corrections again)    
