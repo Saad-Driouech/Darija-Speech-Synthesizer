@@ -15,7 +15,8 @@ The three previous steps are incorporated in the preprocessing notebook: _prepro
 
 4- Perform phonetization by running the notebook _phonetizer.ipynb_.  
 **Be careful, the cell where to stop at this stage is indicated in the notebook**  
-The output of the phonetizer consists of two files: pronunciation dictionary _dict_ and pronunciation of each utterance _utterance_pronunciation_. We will need dict for as input for the aligner.
+The output of the phonetizer consists of two files: pronunciation dictionary _dict_ and pronunciation of each utterance _utterance_pronunciation_. We will need dict for as input for the aligner.  
+**NB: I modified scripts of the original phonetizer and addedd new scripts. You can download the phonetizer scripts with my modification from [here](https://drive.google.com/drive/folders/1Ryw8GHCD0FS0B33hEywm6UhZpKOqyj1O?usp=sharing)**.
 
 5- Perform alignment  
 You will need to install HTK on a linux machine. [Steps to install HTK on Ubuntu](https://gist.github.com/laic/39b8b2e156c39c778888aa825aee9877).  
@@ -29,3 +30,18 @@ The aligner mah flag any formatting errors in the dictionary. These must be corr
 After going through all this and correcting the newly augmented dictionary, the aligner should start aligning the spoken utterances to their transcipts. This step may take an hour to complete depending on the size of the dataset.
 
 Now, all the preprocessing pipeline has been followed. Before starting training, we will need to filter the wav and lab files to keep only the one that have their corresponding textgrid files (for some reason the aligner ignores some files when aligning). To do so, run the notebook _filter lab wav textgrid.ipynb_.
+
+**Training FastSpeech2**
+
+To start training, you will need to run the notebook _Training_FastSpeech2.ipynb_.  
+The scripts needed for training can be downloaded from [here](https://drive.google.com/drive/folders/1pK3FbMlXuTGC0cseaPdP7xqxuKxA_Jv6?usp=sharing).  
+Once the training is done, you can move to synthesis.
+
+**Synthesizing speech**
+
+To synthesize speech you just need to run the synthesis notebook _Inference_FastSpeech2.ipynb_.  
+The scripts needed to run the notebook can be downloaded from [here] (https://drive.google.com/drive/folders/1UM22IgwB_LU4b3BK9InDyuNoiHRITJ2D?usp=sharing). I made changes and fixed bugs in the original repo. That is why I am sharing the one with my modifications.
+
+If all the previous steps were completed with no issues, you should get your audio as output.
+
+Do not hesitate to contact me if you face any problems. It will probably save you some time as I probably would have gone through the bug.
