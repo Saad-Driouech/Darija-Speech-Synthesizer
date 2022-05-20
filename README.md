@@ -31,13 +31,13 @@ After going through all this and correcting the newly augmented dictionary, the 
 
 Now, all the preprocessing pipeline has been followed. Before starting training, we will need to filter the wav and lab files to keep only the one that have their corresponding textgrid files (for some reason the aligner ignores some files when aligning). To do so, run the notebook _filter lab wav textgrid.ipynb_.
 
-**Training FastSpeech2**
+## Training FastSpeech2
 
 To start training, you will need to run the notebook _Training_FastSpeech2.ipynb_.  
 The scripts needed for training can be downloaded from [here](https://drive.google.com/drive/folders/1pK3FbMlXuTGC0cseaPdP7xqxuKxA_Jv6?usp=sharing).  
 Once the training is done, you can move to synthesis.
 
-**Synthesizing speech**
+## Synthesizing speech
 
 To synthesize speech you just need to run the synthesis notebook _Inference_FastSpeech2.ipynb_.  
 The scripts needed to run the notebook can be downloaded from [here](https://drive.google.com/drive/folders/1UM22IgwB_LU4b3BK9InDyuNoiHRITJ2D?usp=sharing). I made changes and fixed bugs in the original repo. That is why I am sharing the one with my modifications.
