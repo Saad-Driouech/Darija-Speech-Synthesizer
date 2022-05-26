@@ -40,7 +40,7 @@ Once the training is done, you can move to synthesis.
 ## Synthesizing speech
 
 To synthesize speech you just need to run the synthesis notebook _Inference_FastSpeech2.ipynb_.  
-The scripts needed to run the notebook can be downloaded from [here](https://drive.google.com/drive/folders/1UM22IgwB_LU4b3BK9InDyuNoiHRITJ2D?usp=sharing). I made changes and fixed bugs in the original repo. That is why I am sharing the one with my modifications.
+The scripts needed to run the notebook can be downloaded from [here](https://drive.google.com/drive/folders/1UM22IgwB_LU4b3BK9InDyuNoiHRITJ2D?usp=sharing). I made changes and fixed bugs in the original repo which can be found [here](https://github.com/ARBML/klaam). That is why I am sharing the one with my modifications.
 
 If all the previous steps were completed with no issues, you should get your audio as output.
 
