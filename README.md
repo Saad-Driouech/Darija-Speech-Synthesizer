@@ -8,7 +8,7 @@ Now you well need to convert mp3 files to wav files. To do so run the notebook: 
 ## Steps to implement the preprocessing pipeline
 
 1- Start by removing emojis and punctuation marks  
-2- Diacritize the text: To do so, you will need an API key from QCRI (Owners of the diacritizer)  
+2- Diacritize the text: To do so, you will need the API provided by QCRI  
 3- Perform transliteration  
 
 The three previous steps are incorporated in the preprocessing notebook: _preprocessing_darija.ipynb_  
