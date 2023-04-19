@@ -15,7 +15,7 @@ The three previous steps are incorporated in the preprocessing notebook: _prepro
 
 4- Perform phonetization by running the notebook _phonetizer.ipynb_.  
 **Be careful, the cell where to stop at this stage is indicated in the notebook**  
-The output of the phonetizer consists of two files: pronunciation dictionary _dict_ and pronunciation of each utterance _utterance_pronunciation_. We will need dict for as input for the aligner.  
+The output of the phonetizer consists of two files: pronunciation dictionary _dict_ and pronunciation of each utterance _utterance_pronunciation_. We will need dict as input for the aligner.  
 **NB: I modified scripts of the original phonetizer and addedd new scripts. You can download the phonetizer scripts with my modification from [here](https://drive.google.com/drive/folders/1Ryw8GHCD0FS0B33hEywm6UhZpKOqyj1O?usp=sharing)**.
 
 5- Perform alignment  
